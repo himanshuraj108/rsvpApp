@@ -8,7 +8,11 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200 
+[functions]
+  node_bundler = "esbuild"
+
+# This is not needed for Next.js and can actually cause issues
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
