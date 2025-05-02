@@ -56,14 +56,14 @@ export async function GET() {
       console.error('Error retrieving store status:', error);
       return NextResponse.json(
         { message: 'Failed to retrieve store status', error: error.message },
-        { status: 500 }
+        { status: 200 }
       );
     }
   } catch (error) {
     console.error('Error getting store status:', error);
     return NextResponse.json(
       { message: 'Failed to get store status', error: error.message },
-      { status: 500 }
+      { status: 200 }
     );
   }
 }
@@ -115,7 +115,7 @@ export async function PUT(request) {
       console.error('Database connection error:', error);
       return NextResponse.json(
         { message: 'Failed to connect to database', error: error.message },
-        { status: 500 }
+        { status: 200 }
       );
     }
     
@@ -138,14 +138,14 @@ export async function PUT(request) {
       console.error('Error saving store status:', error);
       return NextResponse.json(
         { message: 'Failed to save store status', error: error.message },
-        { status: 500 }
+        { status: 200 }
       );
     }
   } catch (error) {
     console.error('Error updating store status:', error);
     return NextResponse.json(
       { message: 'Failed to update store status', error: error.message },
-      { status: 500 }
+      { status: 200 }
     );
   }
 } 
