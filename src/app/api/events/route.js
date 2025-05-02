@@ -32,7 +32,7 @@ export async function GET(request) {
       console.error('Database connection error:', error);
       return NextResponse.json(
         { message: 'Failed to connect to database', error: error.message },
-        { status: 500 }
+        { status: 200 }
       );
     }
 
@@ -62,14 +62,14 @@ export async function GET(request) {
       console.error('Error finding events:', error);
       return NextResponse.json(
         { message: 'Failed to fetch events', error: error.message },
-        { status: 500 }
+        { status: 200 }
       );
     }
   } catch (error) {
     console.error('Error fetching events:', error);
     return NextResponse.json(
       { message: 'Failed to fetch events', error: error.message },
-      { status: 500 }
+      { status: 200 }
     );
   }
 }
@@ -237,7 +237,7 @@ export async function POST(request) {
     console.error('Error creating event:', error);
     return NextResponse.json(
       { message: 'Failed to create event', error: error.message },
-      { status: 500 }
+      { status: 200 }
     );
   }
 } 
